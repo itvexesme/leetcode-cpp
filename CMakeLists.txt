@@ -1,14 +1,15 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.5.0)
 project(leetcode VERSION 0.1.0 LANGUAGES C CXX)
 
 include(CTest)
 enable_testing()
 
+# add_executable(cpp_app solution.cpp)
 add_executable(cpp_test test.cpp)
 
 add_test(
     NAME Test_0
-    COMMAND "$<TARGET_FILE:cpp_test>" "abc" "abcd" "d"
+    COMMAND "$<TARGET_FILE:cpp_test>" "abcd" "abcde" "e"
 )
 
 add_test(
