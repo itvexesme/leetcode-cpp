@@ -29,8 +29,8 @@ class Solution {
     }
 };
 
-// int main() {
-//     Solution sol;
-//     std::cout << sol.findTheDifference("abc", "adcb") << std::endl;
-//     return 0;
-// }
+int main() {
+    Solution sol;
+    std::cout << sol.findTheDifference("", "a") << std::endl;
+    return 0;
+}
