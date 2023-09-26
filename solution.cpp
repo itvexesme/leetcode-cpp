@@ -9,28 +9,21 @@ using namespace std;
 class Solution {
   public:
     char findTheDifference(string s, string t) {
-        std::sort(s.begin(), s.end());
-        std::sort(t.begin(), t.end());
-        char *new_ch;
-        int delta = 0;
-        for (int index = 0; t.size() - 1; index++) {
-            char &t_ch = t[index + delta];
-            if (index == s.size()) {
-                new_ch = &t_ch;
-                break;
-            }
-            char &s_ch = s[index];
-            if (t_ch != s_ch && delta == 0) {
-                new_ch = &t_ch;
-                delta++;
+        int s_sum = 0;
+        int t_sum = 0;
+        for (int i = 0; i < t.size(); i++) {
+            t_sum += static_cast<int>(t[i]);
+            if (i != s.size()) {
+                s_sum += static_cast<int>(s[i]);
             }
         }
-        return *new_ch;
+        int ascii_code = t_sum - s_sum;
+        return static_cast<char>(ascii_code);
     }
 };
 
-int main() {
-    Solution sol;
-    std::cout << sol.findTheDifference("", "a") << std::endl;
-    return 0;
-}
+// int main() {
+//     Solution sol;
+//     std::cout << sol.findTheDifference("ae", "aea") << std::endl;
+//     return 0;
+// }
