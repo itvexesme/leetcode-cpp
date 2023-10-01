@@ -9,22 +9,17 @@ add_executable(cpp_test test.cpp)
 
 add_test(
     NAME Test_0
-    COMMAND "$<TARGET_FILE:cpp_test>" "abcd" "abcde" "e"
+    COMMAND "$<TARGET_FILE:cpp_test>" "III" "3"
 )
 
 add_test(
     NAME Test_1
-    COMMAND "$<TARGET_FILE:cpp_test>" "" "a" "a"
+    COMMAND "$<TARGET_FILE:cpp_test>" "LVIII" "58"
 )
 
 add_test(
     NAME Test_2
-    COMMAND "$<TARGET_FILE:cpp_test>" "asd" "dtsa" "t"
-)
-
-add_test(
-    NAME Test_3
-    COMMAND "$<TARGET_FILE:cpp_test>" "ae" "aea" "a"
+    COMMAND "$<TARGET_FILE:cpp_test>" "MCMXCIV" "1994"
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
